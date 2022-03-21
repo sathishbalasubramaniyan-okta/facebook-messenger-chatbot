@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="BookTable">
+    <DisplayName>BookTable</DisplayName>
+    <Properties/>
+    <ResourceURL>jsc://BookTable.js</ResourceURL>
+</Javascript>

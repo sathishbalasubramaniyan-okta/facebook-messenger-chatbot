@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="GetOTP">
+    <DisplayName>GetOTP</DisplayName>
+    <Properties/>
+    <AssignVariable>
+        <Name>otp</Name>
+        <Ref>request.formparam.otp</Ref>
+    </AssignVariable>
+</AssignMessage>

@@ -1,0 +1,10 @@
+var getUserPayload = context.getVariable("getUserResponse.content");
+var user = JSON.parse(getUserPayload);
+var profile = user.profile;
+var userId = user.id;
+profile.facebookId = context.getVariable("psid");
+var putUserPayload = {};
+putUserPayload.profile = profile;
+var putUserRequest = JSON.stringify(putUserPayload);
+context.setVariable("PutUserPayload", putUserRequest);
+context.setVariable("UserId", userId);

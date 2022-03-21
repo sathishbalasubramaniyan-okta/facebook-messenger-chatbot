@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="ExtractIDToken">
+    <DisplayName>ExtractIDToken</DisplayName>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    <JSONPayload>
+        <Variable name="id_token">
+            <JSONPath>$.id_token</JSONPath>
+        </Variable>
+        <Variable name="access_token">
+            <JSONPath>$.access_token</JSONPath>
+        </Variable>
+    </JSONPayload>
+    <Source clearPayload="false">calloutResponse</Source>
+</ExtractVariables>

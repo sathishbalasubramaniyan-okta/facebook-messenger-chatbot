@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="ExtractUserId">
+    <DisplayName>ExtractUserId</DisplayName>
+    <Properties/>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    <JSONPayload>
+        <Variable name="userId">
+            <JSONPath>$.id</JSONPath>
+        </Variable>
+    </JSONPayload>
+    <Source clearPayload="false">getUserResponse</Source>
+</ExtractVariables>

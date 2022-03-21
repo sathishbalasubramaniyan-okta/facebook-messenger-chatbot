@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="ExtractUser">
+    <DisplayName>ExtractUser</DisplayName>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    <JSONPayload>
+        <Variable name="username">
+            <JSONPath>$.username</JSONPath>
+        </Variable>
+        <Variable name="jwtactive">
+            <JSONPath>$.active</JSONPath>
+        </Variable>
+        <Variable name="expiry">
+            <JSONPath>$.exp</JSONPath>
+        </Variable>
+    </JSONPayload>
+    <Source clearPayload="false">introspectResponse</Source>
+</ExtractVariables>

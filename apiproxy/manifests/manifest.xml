@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="AssignKidsMenuItemsJS" version="SHA-512:883dee92efcc8095ba3c02c103c18dadb47c03c4ec58b19e407ccdece5be523b3e5a39ecd115f6fa6e8e780d737d711219bc2f1619fff8fd32a43d5d394ca231"/>
+        <VersionInfo resourceName="AssignMenuItemsJS" version="SHA-512:d538f0d16d5c6d41fd2e5ca354f50222646707a69843746411419f581e2384446ea62f25d8db06f8a33fb2ff79e035cf3801c8a1bf8ca6adfd992866470f35a0"/>
+        <VersionInfo resourceName="AssignSuccessResponse" version="SHA-512:12bc65efb82448a433c3bf702605f53a04d1866a3e7038f6c4a11cd165a5398ede6277dd6a83e14974636968b00797a4901b74d7470f2e2955b5598cb43b676e"/>
+        <VersionInfo resourceName="AssignUpdateUserInput" version="SHA-512:c91fc671da5841b92d45289f6f6fbe31846d0ebc19f042cf20fd391d90315c2871e89fe484ad7e2bbbcaa405de980a69c1232586a48a739d3307e951d7d3e004"/>
+        <VersionInfo resourceName="BookTable" version="SHA-512:0269bd6cdf1b6dc8554a095349dc47db41855dfeb192ae9bf0ce32a1e69d2e62e2947eedea2604da1e2e4c63598bf8215ffba830ae9fbcbb3c33f80e1064f63c"/>
+        <VersionInfo resourceName="BroadcastMessage" version="SHA-512:472f7dc9059176b1aa38ef10e52a76d50bb8d7d163fde19318b81aed8d08d728e1f507371becc736625ed75f065445e7a71e759c5c559057c73b6a97e05ec675"/>
+        <VersionInfo resourceName="ExtractIDToken" version="SHA-512:240e814e8ad2d22e4d2625cdb826e572f24baa95ecfbe646c1fd04c77989b35da52f73fb62719290a98105f1466ce2b0832b5ff531181c9e563d7c96339bcb2a"/>
+        <VersionInfo resourceName="ExtractSendSMSResponse" version="SHA-512:0acf25958b0d52b0670e6ef14c915341920288db435bf67f59b91396bdd1ae8ae1b5c6cbdb4500bb962b6d92855574bf60e98647afbaa82643b3bee0f054077b"/>
+        <VersionInfo resourceName="ExtractUser" version="SHA-512:66b4318d76994fcc2e330f0d283bf58dff73fdc2a4c0973cb23062f324cef947a7b041fea247811f433d978977a641c9b5f8847771f690a40477cb9cc75ac0b0"/>
+        <VersionInfo resourceName="ExtractUserId" version="SHA-512:1f7e799232d9aa97c00e8dc6217a44a8737e19b9089f68d0b10118ad073b36588bc7e53d3c7db7d4738a5694be8e644d2eaa30e1f6adec3157b99d4b806e36c3"/>
+        <VersionInfo resourceName="GenerateNonce" version="SHA-512:61b43b78edfadc829a9f5b14b48f77db5f7549ca23a036a8f3f6969208a4d254e658a4da7272ca840bb477ddec5315db30903b448c6dd6ba4151e9d1c9baf670"/>
+        <VersionInfo resourceName="GetAuthorizationCode" version="SHA-512:e77a88dba9b58b7dc73c3ab51c1a66401ece93a72dc404a2f26ec336780e1e3ccf28ab36916e67ac2f3f0c1ec5bdc1f4dd4f9eaa183f4779dbd963b64de08da9"/>
+        <VersionInfo resourceName="GetIDToken" version="SHA-512:2658334dbc864c1c517df628d44b524df48d0b9020cd2598463f731ba644fa16925a7fe73cf970973e957bbca09d44e6fe44396a1544c29962cd917d1543db6a"/>
+        <VersionInfo resourceName="GetOTP" version="SHA-512:15ca80d726251d1fab392c1cfac0c17c6ddc50c7e0a0bf90be588abf70821b1e1d3049ab9e3189fc93e0730e90d164d6e0f8a0a706e179b52933c36bf4a0444f"/>
+        <VersionInfo resourceName="GetPSID" version="SHA-512:562110d923cb8622b556bfe4768170f999f156149042a93eaf66fac5e4e3364c50dbc925d63abb9705a224eee9f41d6258c339159d89bae84fd062cbb432a907"/>
+        <VersionInfo resourceName="GetPSIDFormPost" version="SHA-512:c17d56b968cab27a727ed0326e9f51d42300615a6900772155031561ed3267cfd9a13e8de664119a552dbdc87b321b2ce486a0c926d4f5c1dd760a070e263cba"/>
+        <VersionInfo resourceName="GetPSIDFromBlock" version="SHA-512:ab00db868785089ec9b161fe5020053c56fd01703805f78b7c10e30977bed1c1260e3d40a2b4a650a93676c338438b78790a5ca6ce52dfb1dc918d1df6012439"/>
+        <VersionInfo resourceName="GetPSIDFromUserProfile" version="SHA-512:7005c3ab9cb165a0d1d5735f08a4d8ad8e4f8e3bb0dcdc114778b43bc2164d37b8792d06a7940d29aa00c6b3193d5393074896ec23f4c70eed64eca63457c022"/>
+        <VersionInfo resourceName="GetSMSFactorId" version="SHA-512:3f278b373524497cd1cd695981793134a862ac613eedfe6fa82cd40a082cb1d62e7812995f2e7d4b92ee47e8791dca65e4b39f22100e28d1e9df75377421fe8f"/>
+        <VersionInfo resourceName="GetUser" version="SHA-512:7574f61d8d67be6e6873a448e9f2fda98944bb7933a976db5df3f1c37604067026d612f5dd148b852e5ac3abde2033e047833b685b13d84e51d49cbf32a548d1"/>
+        <VersionInfo resourceName="IntrospectIDToken" version="SHA-512:e61d712babbc2823ec2bb940d6231e840f742da93b62f72ce3cea8908d969d7efe0395ee9e19198e37eafe63b3de8cb211c69d944a0e014c58ba17b9a3f4250c"/>
+        <VersionInfo resourceName="ListEnrolledFactors" version="SHA-512:618ead4bd8d8cc212f40c438bf31d9d50e89bbe95a63b200efa01d2f50c43351d08f2724896c82aefb67c749adb23c8750e63fff94c72a2d8fbdf875cbf4ae0e"/>
+        <VersionInfo resourceName="OktaOIDCAuthorize" version="SHA-512:6984efeb1d4b7ce694192a7eb0dc0cafa950552946ad85c6fadf6d1ffe392934936ab6ebc7750c47573bdd02c7075ae47a7942dc8ebfdd579df9b8b71a4f1697"/>
+        <VersionInfo resourceName="RaiseFaultInvalidJWT" version="SHA-512:5ab6c483dfd67737238c254de919bbbfb79256bd5acc6219a9c556348c1082f8a2a4b14da182c43b8217e19cdbe7ab45a9ffcba6702bdee0152b08d6b68e989f"/>
+        <VersionInfo resourceName="RaiseFaultLinkAccounts" version="SHA-512:e8f576c031556a5ea5402e1855d867c38947a328157ac0971d8e93e2b113bfd95aa8adefa8d53630bfe038471ec255aa87f92743451e2bc000c8607d10eaecf6"/>
+        <VersionInfo resourceName="RedirectToBookTable" version="SHA-512:f2f20ea530e096b690bf9803e0b36624a3d21aeadf3aa1aa562e368da49227e12ecdc6c25bcfb3856c1dfe5169a01182b89f9c8114ae3cf49513785e77dbe930"/>
+        <VersionInfo resourceName="RedirectToVerifySMS" version="SHA-512:d2dd094ae2ff50826ce8402d0a281689d793c136f3e5b3a6639207675d044b1412473fd26f779da05f2b17c93e944df645104ac96e5a093168993df4736f1659"/>
+        <VersionInfo resourceName="SendOTPInvalidResponse" version="SHA-512:b0dbd76e97aeb1c147c472be5c2642369421a1c9e33a88709cf8cff072d5b2f19dd3a8a7f362ce8afe63b03a7523f3a3766748cca7549e997b168e30fc788e00"/>
+        <VersionInfo resourceName="SendSMS" version="SHA-512:6bbfd810cf16bffdf71376ada7fb6eaa2714696696093b762ffa91bf036fb399e237419d3405ae53fbc395fcbc80a6d0b87e9b6cc4c204bfba7f363c130ba319"/>
+        <VersionInfo resourceName="UpdateUser" version="SHA-512:9c3bd7484e5d31647f9d772543aabe69cc4e043750caf4108c2a9628d1ff70375e634ee1c1243ca5bb047a607758156eac9dcd72f014665b581a3be40c7dc77a"/>
+        <VersionInfo resourceName="ValidateJWT" version="SHA-512:1a00732256e06f4671528ba0edead8f5962b363200085af070e49842c5c4bae9a1ce226bb6d1b2bba9cbbe1a032e24233c7da29b8898255081baefae28d7f7c3"/>
+        <VersionInfo resourceName="Verify-OTP" version="SHA-512:5c4c587f91d4077c00356d42e7f0d82f578610e557be24b18c212629cabde7d1838455e1d3951cbc663e35257882b7bb3084bd7a96a83eadc33131a7b5ee6ff0"/>
+        <VersionInfo resourceName="VerifyAPIKey" version="SHA-512:ea5c8f110ac8db5f011f0e82a6eb8e07f5297a6f64d098ad02c39992b352615e0de28eed7f9afb96447da23521a2987399f3a53b87c6c0ff58af02b017d361ca"/>
+    </Policies>
+    <ProxyEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:61a3a26cc9259dd6498f6cbcc2b23bca31362be7f38c2cd1ac809e93899b69499ae0d1735a390787d68551850aab042b93169b90da2d1da8dd2bcc622c3c30ca"/>
+    </ProxyEndpoints>
+    <Resources>
+        <VersionInfo resourceName="jsc://AssignMenuItems.js" version="SHA-512:09222e7795cf55ab2be8374907d041ad3ca0bcc4d534faa55e8673e15c2ffdb90f7c5b18a81380b0bb13d0262d2afdc6cdbeda63b7dd441b33c60d2a5176bff8"/>
+        <VersionInfo resourceName="jsc://AssignMenuItemsKids.js" version="SHA-512:8a01abebe6e90d7088088cb57e29e8a7f73c417e5dced0f90932eadfaaf12563036f9be3ea83dbeafee3b21cadaba99889bf203758da800f2c147b5d05f96bfe"/>
+        <VersionInfo resourceName="jsc://AssignUpdateUserInput.js" version="SHA-512:4ad6f9e7e2f6615c492bba1d203915117af349e79d61ad9d47d2abc77ec8b7b662c42d3daaf135b9b8b59b41ca4d6dabed273f8a84f3533c37a6a4f40b3ac0b1"/>
+        <VersionInfo resourceName="jsc://BookTable.js" version="SHA-512:5471b454279a2f4f95506d79f100459448ed6af3925b3619ad7b4b21dda1ee99ec111399444b8a91e557b38a6412663c20f82282da66e6be5b284b84054760c3"/>
+        <VersionInfo resourceName="jsc://CheckJWTExpiry.js" version="SHA-512:71ba64611f558616edaddafefc8c55428979f8fb64fdf93aa25cfa7fb3b0aedbb6d365a8be5cc95606ad5ad9bea1414ef66b707e42d9fd3c8670beffa38c7db4"/>
+        <VersionInfo resourceName="jsc://GenerateNonce.js" version="SHA-512:b9b881abc123ebbc04b5f0ab69214ddf9e76427652acc0f97f7f5f37dcc12b493a6dfbcba85b87e9a62bf412d849b399a8d4219692a2d77080294f2848254b7e"/>
+        <VersionInfo resourceName="jsc://GetSMSFactorId.js" version="SHA-512:c4d76e14e08e16487a96b74fa947328f4568d48426e775f996938bfafa12103411609c8a2e31ef2b8a270bc7381cc3fddae32be3e7c174f19d2e424c396fcc67"/>
+    </Resources>
+    <SharedFlows/>
+    <TargetEndpoints/>
+</Manifest>

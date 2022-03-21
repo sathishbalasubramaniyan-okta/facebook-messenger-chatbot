@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="RaiseFaultLinkAccounts">
+    <DisplayName>RaiseFaultLinkAccounts</DisplayName>
+    <Properties/>
+    <FaultResponse>
+        <Set>
+            <Payload contentType="application/json" variablePrefix="@" variableSuffix="#">
+                {
+                 "messages": [
+                    {
+                      "attachment": {
+                        "type": "template",
+                        "payload": {
+                          "template_type": "button",
+                          "text": "You have not linked your facebook account with your Acme Restaurants account or your account linking has expired. Click the button below to link your accounts",
+                          "buttons": [
+                            {
+                              "type": "web_url",
+                              "url": "https://sathishbalasubramaniyan-eval-test.apigee.net/chatbot-feeder/link-accounts?psid=@psid#",
+                              "title": "Link my accounts"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+            </Payload>
+            <StatusCode>200</StatusCode>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>

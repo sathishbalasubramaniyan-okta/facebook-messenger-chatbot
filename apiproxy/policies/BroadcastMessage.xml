@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="BroadcastMessage">
+    <DisplayName>BroadcastMessage</DisplayName>
+    <Properties/>
+    <Request clearPayload="true" variable="broadcastRequest">
+        <Set>
+            <QueryParams>
+                <QueryParam name="chatfuel_token">mELtlMAHYqR0BvgEiMq8zVek3uYUK3OJMbtyrdNPTrQB9ndV0fM7lWTFZbM4MZvD</QueryParam>
+                <QueryParam name="chatfuel_block_name">AccountLinked</QueryParam>
+                <QueryParam name="username">{username}</QueryParam>
+            </QueryParams>
+            <Verb>POST</Verb>
+        </Set>
+        <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    </Request>
+    <Response>broadcastResponse</Response>
+    <HTTPTargetConnection>
+        <Properties/>
+        <URL>https://api.chatfuel.com/bots/5b066193e4b0c78a7865e94e/users/{psid}/send</URL>
+    </HTTPTargetConnection>
+</ServiceCallout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="UpdateUser">
+    <DisplayName>UpdateUser</DisplayName>
+    <Properties/>
+    <Request clearPayload="true" variable="putUserRequest">
+        <Set>
+            <Headers>
+                <Header name="Accept">application/json</Header>
+                <Header name="Authorization">SSWS 00REkdNL4YFT-zWQNCxJbzBrTcB7m2YDUt7TEwYZgO</Header>
+            </Headers>
+            <Verb>PUT</Verb>
+            <Payload contentType="application/json" variablePrefix="@" variableSuffix="#">@PutUserPayload#</Payload>
+        </Set>
+        <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    </Request>
+    <Response>putUserResponse</Response>
+    <HTTPTargetConnection>
+        <Properties/>
+        <URL>https://sathishb.okta.com/api/v1/users/{UserId}</URL>
+    </HTTPTargetConnection>
+</ServiceCallout>

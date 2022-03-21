@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="RedirectToVerifySMS">
+    <DisplayName>RedirectToVerifySMS</DisplayName>
+    <Properties/>
+    <Set>
+        <Payload contentType="application/json">
+            {
+              "redirect_to_blocks": ["Verify MFA"]
+            }
+        </Payload>
+    </Set>
+</AssignMessage>

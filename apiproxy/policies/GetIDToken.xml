@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="GetIDToken">
+    <DisplayName>GetIDToken</DisplayName>
+    <Properties/>
+    <Request clearPayload="true" variable="myRequest">
+        <Set>
+            <Headers>
+                <Header name="Accept">application/json</Header>
+                <Header name="Authorization">Basic MG9hMTdhcWh1OEY2d3hlRGwycDc6MU5mUGZxZS11bHRVajdvTFF0cC14TjZXUFpheVBIb3FDSkY3OG1ocA==</Header>
+            </Headers>
+            <Verb>POST</Verb>
+            <FormParams>
+                <FormParam name="code">{code}</FormParam>
+                <FormParam name="grant_type">authorization_code</FormParam>
+                <FormParam name="redirect_uri">https://sathishbalasubramaniyan-eval-test.apigee.net/chatbot-feeder/callback</FormParam>
+            </FormParams>
+        </Set>
+        <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    </Request>
+    <Response>calloutResponse</Response>
+    <HTTPTargetConnection>
+        <Properties/>
+        <URL>https://sathishb.okta.com/oauth2/default/v1/token</URL>
+    </HTTPTargetConnection>
+</ServiceCallout>

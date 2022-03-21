@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AssignSuccessResponse">
+    <DisplayName>AssignSuccessResponse</DisplayName>
+    <Properties/>
+    <Set>
+        <Payload contentType="text/plain">
+            Your account has been linked! You may close this window and continue your chat 
+        </Payload>
+    </Set>
+</AssignMessage>

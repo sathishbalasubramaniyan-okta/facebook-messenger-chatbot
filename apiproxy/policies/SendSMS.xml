@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="SendSMS">
+    <DisplayName>SendSMS</DisplayName>
+    <Properties/>
+    <Request clearPayload="true" variable="sendSMSRequest">
+        <Set>
+            <Headers>
+                <Header name="Accept">application/json</Header>
+                <Header name="Authorization">SSWS 00REkdNL4YFT-zWQNCxJbzBrTcB7m2YDUt7TEwYZgO</Header>
+            </Headers>
+            <Verb>POST</Verb>
+        </Set>
+        <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    </Request>
+    <Response>sendSMSResponse</Response>
+    <HTTPTargetConnection>
+        <Properties/>
+        <URL>https://sathishb.okta.com/api/v1/users/{userId}/factors/{smsFactorId}/verify</URL>
+    </HTTPTargetConnection>
+</ServiceCallout>

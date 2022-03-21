@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="ListEnrolledFactors">
+    <DisplayName>ListEnrolledFactors</DisplayName>
+    <Properties/>
+    <Request clearPayload="true" variable="getFactorsRequest">
+        <Set>
+            <Headers>
+                <Header name="Accept">application/json</Header>
+                <Header name="Authorization">SSWS 00REkdNL4YFT-zWQNCxJbzBrTcB7m2YDUt7TEwYZgO</Header>
+            </Headers>
+            <Verb>GET</Verb>
+        </Set>
+        <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    </Request>
+    <Response>getFactorsResponse</Response>
+    <HTTPTargetConnection>
+        <Properties/>
+        <URL>https://sathishb.okta.com/api/v1/users/{userId}/factors</URL>
+    </HTTPTargetConnection>
+</ServiceCallout>

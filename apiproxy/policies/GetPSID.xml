@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="GetPSID">
+    <DisplayName>GetPSID</DisplayName>
+    <Properties/>
+    <AssignVariable>
+        <Name>psid</Name>
+        <Ref>request.queryparam.psid</Ref>
+    </AssignVariable>
+</AssignMessage>

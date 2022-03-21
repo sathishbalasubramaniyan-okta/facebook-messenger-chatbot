@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="IntrospectIDToken">
+    <DisplayName>IntrospectIDToken</DisplayName>
+    <Properties/>
+    <Request clearPayload="true" variable="introspectRequest">
+        <Set>
+            <Headers>
+                <Header name="Accept">application/json</Header>
+                <Header name="Authorization">Basic MG9hMTdhcWh1OEY2d3hlRGwycDc6MU5mUGZxZS11bHRVajdvTFF0cC14TjZXUFpheVBIb3FDSkY3OG1ocA==</Header>
+            </Headers>
+            <Verb>POST</Verb>
+            <FormParams>
+                <FormParam name="token">{id_token}</FormParam>
+                <FormParam name="token_type_hint">id_token</FormParam>
+            </FormParams>
+        </Set>
+        <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    </Request>
+    <Response>introspectResponse</Response>
+    <HTTPTargetConnection>
+        <Properties/>
+        <URL>https://sathishb.okta.com/oauth2/default/v1/introspect</URL>
+    </HTTPTargetConnection>
+</ServiceCallout>

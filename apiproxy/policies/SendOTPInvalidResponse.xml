@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="SendOTPInvalidResponse">
+    <DisplayName>SendOTPInvalidResponse</DisplayName>
+    <Properties/>
+    <Set>
+        <StatusCode>200</StatusCode>
+        <Payload contentType="application/json">
+            {
+             "messages": [
+               {"text": "The OTP you entered in invalid. Your booking has not gone through"},
+               {"text": "Type 'Book table' to give it another go!"}
+             ]
+            }
+        </Payload>
+    </Set>
+</AssignMessage>

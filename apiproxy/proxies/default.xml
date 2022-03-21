@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <FaultRules>
+        <FaultRule name="otp_failed">
+            <Step>
+                <Name>SendOTPInvalidResponse</Name>
+            </Step>
+            <Condition>(servicecallout.Verify-OTP.failed=true)</Condition>
+        </FaultRule>
+    </FaultRules>
+    <PreFlow name="PreFlow">
+        <Request/>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <Flows>
+        <Flow name="LinkAccounts">
+            <Description/>
+            <Request>
+                <!--<Step>
+                    <Name>VerifyAPIKey</Name>
+                </Step>-->
+                <Step>
+                    <Name>GetPSID</Name>
+                </Step>
+                <Step>
+                    <Name>GenerateNonce</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>OktaOIDCAuthorize</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/link-accounts") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="Callback">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>GetAuthorizationCode</Name>
+                </Step>
+                <Step>
+                    <Name>GetIDToken</Name>
+                </Step>
+                <Step>
+                    <Name>ExtractIDToken</Name>
+                </Step>
+                <Step>
+                    <Name>IntrospectIDToken</Name>
+                </Step>
+                <Step>
+                    <Name>ExtractUser</Name>
+                </Step>
+                <Step>
+                    <Name>ValidateJWT</Name>
+                </Step>
+                <Step>
+                    <Name>RaiseFaultInvalidJWT</Name>
+                    <Condition>jwtactive=false or jwtexpired=true</Condition>
+                </Step>
+                <Step>
+                    <Name>GetUser</Name>
+                </Step>
+                <Step>
+                    <Name>AssignUpdateUserInput</Name>
+                </Step>
+                <Step>
+                    <Name>UpdateUser</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>BroadcastMessage</Name>
+                </Step>
+                <Step>
+                    <Name>AssignSuccessResponse</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/callback") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="GetMenu">
+            <Description>Get today's menu</Description>
+            <Request>
+                <!--<Step>
+                    <Name>VerifyAPIKey</Name>
+                </Step>-->
+                <Step>
+                    <Name>GetPSIDFromBlock</Name>
+                </Step>
+                <Step>
+                    <Name>GetUser</Name>
+                </Step>
+                <Step>
+                    <Name>GetPSIDFromUserProfile</Name>
+                </Step>
+                <Step>
+                    <Name>RaiseFaultLinkAccounts</Name>
+                    <Condition>psid_profile=null or psid_profile!=psid</Condition>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>AssignMenuItemsJS</Name>
+                    <Condition>request.queryparam.kids=null</Condition>
+                </Step>
+                <!--<Step>
+                    <Name>AssignMenuItems</Name>
+                </Step>-->
+                <Step>
+                    <Name>AssignKidsMenuItemsJS</Name>
+                    <Condition>request.queryparam.kids!=null</Condition>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/menu") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="Book Table">
+            <Description/>
+            <Request>
+                <!--<Step>
+                    <Name>VerifyAPIKey</Name>
+                </Step>-->
+                <Step>
+                    <Name>GetPSIDFormPost</Name>
+                </Step>
+                <Step>
+                    <Name>GetUser</Name>
+                </Step>
+                <Step>
+                    <Name>GetPSIDFromUserProfile</Name>
+                </Step>
+                <Step>
+                    <Name>RaiseFaultLinkAccounts</Name>
+                    <Condition>psid_profile=null or psid_profile!=psid</Condition>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>BookTable</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/book") and (request.verb = "POST")</Condition>
+        </Flow>
+        <Flow name="Challenge MFA">
+            <Description/>
+            <Request>
+                <!--<Step>
+                    <Name>VerifyAPIKey</Name>
+                </Step>-->
+                <Step>
+                    <Name>GetPSIDFormPost</Name>
+                </Step>
+                <Step>
+                    <Name>GetUser</Name>
+                </Step>
+                <Step>
+                    <Name>GetPSIDFromUserProfile</Name>
+                </Step>
+                <Step>
+                    <Name>RaiseFaultLinkAccounts</Name>
+                    <Condition>psid_profile=null or psid_profile!=psid</Condition>
+                </Step>
+                <Step>
+                    <Name>ExtractUserId</Name>
+                </Step>
+                <Step>
+                    <Name>ListEnrolledFactors</Name>
+                </Step>
+                <Step>
+                    <Name>GetSMSFactorId</Name>
+                </Step>
+                <Step>
+                    <Name>SendSMS</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>ExtractSendSMSResponse</Name>
+                </Step>
+                <Step>
+                    <Name>RedirectToVerifySMS</Name>
+                    <Condition>factorResult="CHALLENGE"</Condition>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/challenge-mfa") and (request.verb = "POST")</Condition>
+        </Flow>
+        <Flow name="Verify MFA">
+            <Description/>
+            <Request>
+                <!--<Step>
+                    <Name>VerifyAPIKey</Name>
+                </Step>-->
+                <Step>
+                    <Name>GetPSIDFormPost</Name>
+                </Step>
+                <Step>
+                    <Name>GetOTP</Name>
+                </Step>
+                <Step>
+                    <Name>GetUser</Name>
+                </Step>
+                <Step>
+                    <Name>GetPSIDFromUserProfile</Name>
+                </Step>
+                <Step>
+                    <Name>RaiseFaultLinkAccounts</Name>
+                    <Condition>psid_profile=null or psid_profile!=psid</Condition>
+                </Step>
+                <Step>
+                    <Name>ExtractUserId</Name>
+                </Step>
+                <Step>
+                    <Name>ListEnrolledFactors</Name>
+                </Step>
+                <Step>
+                    <Name>GetSMSFactorId</Name>
+                </Step>
+                <Step>
+                    <Name>Verify-OTP</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>ExtractSendSMSResponse</Name>
+                </Step>
+                <Step>
+                    <Name>RedirectToBookTable</Name>
+                    <Condition>factorResult="SUCCESS"</Condition>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/verify-mfa") and (request.verb = "POST")</Condition>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/chatbot-feeder</BasePath>
+        <Properties/>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="noroute"/>
+</ProxyEndpoint>

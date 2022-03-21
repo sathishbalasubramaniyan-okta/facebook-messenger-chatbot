@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="GetAuthorizationCode">
+    <DisplayName>GetAuthorizationCode</DisplayName>
+    <Properties/>
+    <AssignVariable>
+        <Name>code</Name>
+        <Ref>request.queryparam.code</Ref>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>psid</Name>
+        <Ref>request.queryparam.state</Ref>
+    </AssignVariable>
+</AssignMessage>
